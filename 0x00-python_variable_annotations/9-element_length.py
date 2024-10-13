@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
-"""9-element_length.py"""
+"""function with annotated parameters and
+return values with appropriate types."""
+
+from typing import List, Tuple, Sequence, Iterable
 
 
-def element_length(lst: list) -> list:
-    """Return a list of tuples with the length of each list element"""
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    """Takes a list of strings and returns a list of tuples
+    where each tuple is a string from the list and its length.
+    """
+
     return [(i, len(i)) for i in lst]
